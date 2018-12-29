@@ -62,5 +62,12 @@ Page({
         isPlayingMusic: true
       })
     }
-  }
+  },
+  onShareAppMessage: function () {
+    return {
+      title: '贾烛松-董雅茹婚礼邀请',
+      path:"/pages/index/index",
+      imageUrl: '/image/timg.jpg'
+    }
+  },
 })
