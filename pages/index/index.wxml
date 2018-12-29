@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view wx:if="{{music_url}}">
+  <view wx:if="{{isPlayingMusic}}">
+    <view class="background_music" bindtap="play">
+      <image src="/image/music_icon.png" class="musicImg music_icon" />
+      <image src="/image/music_play.png" class="music_play pauseImg" />
+    </view>
+  </view>
+  <view wx:else>
+    <view class="background_music" bindtap="play">
+      <image src="/image/music_icon.png" class="musicImg" />
+      <image src="/image/music_play.png" class="music_play playImg" />
+    </view>
+  </view>
+</view>
+<view >
+  <swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  class='swiperClass'
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="300" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='content'>
+ <view class='myName'>贾烛松&&董雅茹</view>
+ <view>谨定于2019年2月10日（星期六）</view>
+ <view>农历正月初六 举办婚礼</view>
+ <view>地址：潜江市高石碑镇钟市街（<text bindtap="bindViewTap" class='loadTo'>点击导航</text>）  </view>
+ <view>恭请您的光临</view>
+</view>
+</view>
